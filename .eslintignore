@@ -1,0 +1,4 @@
+dist/
+.*rc
+.*rc.js
+*.config.js
