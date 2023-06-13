@@ -5,6 +5,7 @@ import auth from './context-handlers/auth.js'
 import { Task } from './context-handlers/task.js'
 
 import bodyParser from 'koa-bodyparser'
+import 'dotenv/config'
 
 const taskContextHandler = new Task()
 
@@ -42,6 +43,8 @@ const router = new Router({
 })
 
 router.post('/signUp', auth.signUp)
+router.post('/login', auth.login)
+router.get('/verifyUser', auth.verifyUser)
 
 router.get('/getAllTask', taskContextHandler.getAllTask)
 
